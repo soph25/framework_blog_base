@@ -1,0 +1,281 @@
+<?php
+return array (
+  0 => 
+  array (
+    'GET' => 
+    array (
+      '/' => '/',
+      '/admin' => '/admin',
+      '/contact' => '/contact',
+      '/boutique' => '/boutique',
+      '/boutique/mes-achats' => '/boutique/mes-achats',
+      '/admin/products' => '/admin/products',
+      '/admin/products/new' => '/admin/products/new',
+      '/blog' => '/blog',
+      '/admin/posts' => '/admin/posts',
+      '/admin/posts/new' => '/admin/posts/new',
+      '/admin/categories' => '/admin/categories',
+      '/admin/categories/new' => '/admin/categories/new',
+      '/login' => '/login',
+      '/password' => '/password',
+      '/inscription' => '/inscription',
+      '/mon-profil' => '/mon-profil',
+      '/panier' => '/panier',
+      '/mes-commandes' => '/mes-commandes',
+    ),
+    'POST' => 
+    array (
+      '/contact' => '/contact',
+      '/admin/products/new' => '/admin/products/new',
+      '/admin/posts/new' => '/admin/posts/new',
+      '/admin/categories/new' => '/admin/categories/new',
+      '/login' => '/login',
+      '/logout' => '/logout',
+      '/password' => '/password',
+      '/inscription' => '/inscription',
+      '/mon-profil' => '/mon-profil',
+      '/panier/recap' => '/panier/recap',
+      '/panier/commander' => '/panier/commander',
+    ),
+    'DELETE' => 
+    array (
+      '/password' => '/password',
+    ),
+    'PUT' => 
+    array (
+      '/password' => '/password',
+    ),
+  ),
+  1 => 
+  array (
+    'GET' => 
+    array (
+      0 => 
+      array (
+        'regex' => '~^(?|/boutique/([^/]+)/download|/boutique/facture/([^/]+)()|/boutique/([^/]+)()()|/admin/products/(\\d+)()()()|/blog/([a-z\\-0-9]+)\\-([0-9]+)()()()|/blog/category/([a-z\\-0-9]+)()()()()()|/admin/posts/(\\d+)()()()()()()|/admin/categories/(\\d+)()()()()()()()|/password/reset/(\\d+)/([^/]+)()()()()()()()|/mes\\-commandes/(\\d+)()()()()()()()()())$~',
+        'routeMap' => 
+        array (
+          2 => 
+          array (
+            0 => '/boutique/{id}/download',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          3 => 
+          array (
+            0 => '/boutique/facture/{id}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          4 => 
+          array (
+            0 => '/boutique/{slug}',
+            1 => 
+            array (
+              'slug' => 'slug',
+            ),
+          ),
+          5 => 
+          array (
+            0 => '/admin/products/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          6 => 
+          array (
+            0 => '/blog/{slug:[a-z\\-0-9]+}-{id:[0-9]+}',
+            1 => 
+            array (
+              'slug' => 'slug',
+              'id' => 'id',
+            ),
+          ),
+          7 => 
+          array (
+            0 => '/blog/category/{slug:[a-z\\-0-9]+}',
+            1 => 
+            array (
+              'slug' => 'slug',
+            ),
+          ),
+          8 => 
+          array (
+            0 => '/admin/posts/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          9 => 
+          array (
+            0 => '/admin/categories/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          10 => 
+          array (
+            0 => '/password/reset/{id:\\d+}/{token}',
+            1 => 
+            array (
+              'id' => 'id',
+              'token' => 'token',
+            ),
+          ),
+          11 => 
+          array (
+            0 => '/mes-commandes/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+        ),
+      ),
+    ),
+    'POST' => 
+    array (
+      0 => 
+      array (
+        'regex' => '~^(?|/boutique/([^/]+)/recap|/boutique/([^/]+)/process()|/admin/products/(\\d+)()()|/admin/posts/(\\d+)()()()|/admin/categories/(\\d+)()()()()|/password/reset/(\\d+)/([^/]+)()()()()|/panier/ajouter/(\\d+)()()()()()()|/panier/changer/(\\d+)()()()()()()())$~',
+        'routeMap' => 
+        array (
+          2 => 
+          array (
+            0 => '/boutique/{id}/recap',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          3 => 
+          array (
+            0 => '/boutique/{id}/process',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          4 => 
+          array (
+            0 => '/admin/products/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          5 => 
+          array (
+            0 => '/admin/posts/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          6 => 
+          array (
+            0 => '/admin/categories/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          7 => 
+          array (
+            0 => '/password/reset/{id:\\d+}/{token}',
+            1 => 
+            array (
+              'id' => 'id',
+              'token' => 'token',
+            ),
+          ),
+          8 => 
+          array (
+            0 => '/panier/ajouter/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          9 => 
+          array (
+            0 => '/panier/changer/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+        ),
+      ),
+    ),
+    'DELETE' => 
+    array (
+      0 => 
+      array (
+        'regex' => '~^(?|/admin/products/(\\d+)|/admin/posts/(\\d+)()|/admin/categories/(\\d+)()()|/password/reset/(\\d+)/([^/]+)()())$~',
+        'routeMap' => 
+        array (
+          2 => 
+          array (
+            0 => '/admin/products/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          3 => 
+          array (
+            0 => '/admin/posts/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          4 => 
+          array (
+            0 => '/admin/categories/{id:\\d+}',
+            1 => 
+            array (
+              'id' => 'id',
+            ),
+          ),
+          5 => 
+          array (
+            0 => '/password/reset/{id:\\d+}/{token}',
+            1 => 
+            array (
+              'id' => 'id',
+              'token' => 'token',
+            ),
+          ),
+        ),
+      ),
+    ),
+    'PUT' => 
+    array (
+      0 => 
+      array (
+        'regex' => '~^(?|/password/reset/(\\d+)/([^/]+))$~',
+        'routeMap' => 
+        array (
+          3 => 
+          array (
+            0 => '/password/reset/{id:\\d+}/{token}',
+            1 => 
+            array (
+              'id' => 'id',
+              'token' => 'token',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);
